@@ -1,0 +1,3151 @@
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `blog_curso_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `blog_curso_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProducts (20231121144055)
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE `products` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `Name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20231121144055')[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2023-11-21 14:44:18.347929', '2023-11-21 14:44:18.347929')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2023-11-21 11:45:18 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 449)
+Completed 200 OK in 19ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3697)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:45:49 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1043)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: be6d5eca6246ff69f049
+Version: webpack 4.47.0
+Time: 484ms
+Built at: 11/21/2023 11:45:51 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-82e2ff4e7b42f0dc7d3d.js   8.45 KiB  application  [emitted] [immutable]  application
+js/application-82e2ff4e7b42f0dc7d3d.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-82e2ff4e7b42f0dc7d3d.js js/application-82e2ff4e7b42f0dc7d3d.js.map
+[./app/javascript/packs/application.js] 4.55 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find package '@babel/plugin-proposal-private-methods' imported from /home/arthur/workspace/blog_curso/babel-virtual-resolve-base.js
+    at new NodeError (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:873:9)
+    at moduleResolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:902:20)
+    at defaultResolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:985:15)
+    at resolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:999:12)
+    at tryImportMetaResolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/files/plugins.js:135:45)
+    at resolveStandardizedNameForImport (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/files/plugins.js:157:19)
+    at resolveStandardizedName (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/files/plugins.js:166:12)
+    at loadPlugin (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/files/plugins.js:45:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-descriptors.js:140:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:291:5)
+    at /home/arthur/workspace/blog_curso/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:43:15)
+    at Function.all (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-descriptors.js:102:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-descriptors.js:99:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-chain.js:191:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-chain.js:77:27)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/partial.js:72:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at loadPartialConfig (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/partial.js:115:25)
+    at loadPartialConfig.next (<anonymous>)
+    at step (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:269:25)
+    at evaluateAsync (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:291:5)
+    at /home/arthur/workspace/blog_curso/node_modules/gensync/index.js:93:9
+    at new Promise (<anonymous>)
+    at async (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:92:14)
+    at stopHiding - secret - don't use this - v1 (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/errors/rewrite-stack-trace.js:47:12)
+    at loadPartialConfigAsync (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/index.js:34:85)
+    at Object.<anonymous> (/home/arthur/workspace/blog_curso/node_modules/babel-loader/lib/index.js:126:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/home/arthur/workspace/blog_curso/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/home/arthur/workspace/blog_curso/node_modules/babel-loader/lib/index.js:4:194)
+    at /home/arthur/workspace/blog_curso/node_modules/babel-loader/lib/index.js:4:364
+    at new Promise (<anonymous>)
+
+
+(node:21748) UnhandledPromiseRejectionWarning: Error: Cannot find package '@babel/plugin-proposal-private-methods' imported from /home/arthur/workspace/blog_curso/babel-virtual-resolve-base.js
+    at new NodeError (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:203:5)
+    at packageResolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:873:9)
+    at moduleResolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:902:20)
+    at defaultResolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:985:15)
+    at resolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:999:12)
+    at tryImportMetaResolve (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/files/plugins.js:135:45)
+    at resolveStandardizedNameForImport (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/files/plugins.js:157:19)
+    at resolveStandardizedName (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/files/plugins.js:166:12)
+    at loadPlugin (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/files/plugins.js:45:20)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-descriptors.js:140:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:291:5)
+    at /home/arthur/workspace/blog_curso/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:43:15)
+    at Function.all (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-descriptors.js:102:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-descriptors.js:99:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/gensync-utils/functional.js:21:23
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-chain.js:191:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/config-chain.js:77:27)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/partial.js:72:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at loadPartialConfig (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/partial.js:115:25)
+    at loadPartialConfig.next (<anonymous>)
+    at step (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:269:25)
+    at evaluateAsync (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:291:5)
+    at /home/arthur/workspace/blog_curso/node_modules/gensync/index.js:93:9
+    at new Promise (<anonymous>)
+    at async (/home/arthur/workspace/blog_curso/node_modules/gensync/index.js:92:14)
+    at stopHiding - secret - don't use this - v1 (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/errors/rewrite-stack-trace.js:47:12)
+    at loadPartialConfigAsync (/home/arthur/workspace/blog_curso/node_modules/@babel/core/lib/config/index.js:34:85)
+    at Object.<anonymous> (/home/arthur/workspace/blog_curso/node_modules/babel-loader/lib/index.js:126:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/home/arthur/workspace/blog_curso/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/home/arthur/workspace/blog_curso/node_modules/babel-loader/lib/index.js:4:194)
+    at /home/arthur/workspace/blog_curso/node_modules/babel-loader/lib/index.js:4:364
+    at new Promise (<anonymous>)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21748) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:21748) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+  Rendered layout layouts/application.html.erb (Duration: 1975.3ms | Allocations: 20643)
+Completed 200 OK in 1979ms (Views: 1975.6ms | ActiveRecord: 1.1ms | Allocations: 22082)
+
+
+Started GET "/products/new" for ::1 at 2023-11-21 11:46:11 -0300
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 8.9ms | Allocations: 4131)
+  Rendered products/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4494)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 7567)
+Completed 200 OK in 30ms (Views: 14.8ms | ActiveRecord: 3.8ms | Allocations: 10838)
+
+
+Started POST "/products" for ::1 at 2023-11-21 11:46:21 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"Name"=>"Cadeira"}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mProduct Create (2.5ms)[0m  [1m[32mINSERT INTO `products` (`Name`, `created_at`, `updated_at`) VALUES ('Cadeira', '2023-11-21 14:46:21.240815', '2023-11-21 14:46:21.240815')[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 15ms (ActiveRecord: 6.6ms | Allocations: 2710)
+
+
+Started GET "/products/1" for ::1 at 2023-11-21 11:46:21 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3283)
+Completed 200 OK in 19ms (Views: 5.4ms | ActiveRecord: 0.9ms | Allocations: 6825)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:46:23 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 904)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3977)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 2.3ms | Allocations: 4369)
+
+
+Started GET "/products/new" for ::1 at 2023-11-21 11:46:25 -0300
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.6ms | Allocations: 621)
+  Rendered products/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3808)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 4198)
+
+
+Started POST "/products" for ::1 at 2023-11-21 11:46:28 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"Name"=>"Mesa"}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mProduct Create (2.0ms)[0m  [1m[32mINSERT INTO `products` (`Name`, `created_at`, `updated_at`) VALUES ('Mesa', '2023-11-21 14:46:28.004846', '2023-11-21 14:46:28.004846')[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 15ms (ActiveRecord: 5.8ms | Allocations: 3121)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:46:28 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3191)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 1.8ms | Allocations: 4158)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:46:29 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 4124)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 2.0ms | Allocations: 4515)
+
+
+Started GET "/products/1/edit" for ::1 at 2023-11-21 11:46:30 -0300
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 1.9ms | Allocations: 715)
+  Rendered products/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4066)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 1.6ms | Allocations: 5155)
+
+
+Started PATCH "/products/1" for ::1 at 2023-11-21 11:46:39 -0300
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"Name"=>"Cadeira Gamer"}, "commit"=>"Update Product", "id"=>"1"}
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Update (3.1ms)[0m  [1m[33mUPDATE `products` SET `products`.`Name` = 'Cadeira Gamer', `products`.`updated_at` = '2023-11-21 14:46:39.284107' WHERE `products`.`id` = 1[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 18ms (ActiveRecord: 8.6ms | Allocations: 3195)
+
+
+Started GET "/products/1" for ::1 at 2023-11-21 11:46:39 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3193)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 1.0ms | Allocations: 4163)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:46:40 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1044)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4121)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.8ms | Allocations: 4511)
+
+
+Started GET "/products/1" for ::1 at 2023-11-21 11:46:43 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3189)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 2.6ms | Allocations: 4148)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:46:44 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4116)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 1.7ms | Allocations: 4506)
+
+
+Started GET "/products/1" for ::1 at 2023-11-21 11:46:46 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3191)
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 2.2ms | Allocations: 4167)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:46:52 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1049)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4124)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.6ms | Allocations: 4525)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:46:56 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3189)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.9ms | Allocations: 4148)
+
+
+Started GET "/products/2/edit" for ::1 at 2023-11-21 11:47:01 -0300
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 1.1ms | Allocations: 684)
+  Rendered products/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3914)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.5ms | Allocations: 4875)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:03 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4116)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 2.1ms | Allocations: 4506)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:47:04 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3189)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 1.5ms | Allocations: 4149)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:12 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4116)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.3ms | Allocations: 4506)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:47:13 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3193)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.6ms | Allocations: 4153)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:17 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4116)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 2.0ms | Allocations: 4506)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:19 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4116)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 1.7ms | Allocations: 4506)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:47:27 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3189)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 1.7ms | Allocations: 4149)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:28 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4116)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.9ms | Allocations: 4506)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:47:30 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3197)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 1.4ms | Allocations: 4158)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:31 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4125)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 2.1ms | Allocations: 4520)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:47:32 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3189)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.1ms | Allocations: 4148)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:33 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1044)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4117)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 1.2ms | Allocations: 4509)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:47:47 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3193)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.5ms | Allocations: 4153)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:51 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 4116)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 2.0ms | Allocations: 4506)
+
+
+Started GET "/products/new" for ::1 at 2023-11-21 11:47:53 -0300
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.2ms | Allocations: 618)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3805)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 4195)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:54 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4116)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 2.3ms | Allocations: 4507)
+
+
+Started GET "/products/2/edit" for ::1 at 2023-11-21 11:47:55 -0300
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.2ms | Allocations: 684)
+  Rendered products/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3906)
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 2.0ms | Allocations: 4865)
+
+
+Started PATCH "/products/2" for ::1 at 2023-11-21 11:47:58 -0300
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"Name"=>"Mesa "}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Update (0.8ms)[0m  [1m[33mUPDATE `products` SET `products`.`Name` = 'Mesa ', `products`.`updated_at` = '2023-11-21 14:47:58.079488' WHERE `products`.`id` = 2[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 13ms (ActiveRecord: 5.3ms | Allocations: 3165)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:47:58 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3199)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.9ms | Allocations: 4168)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:47:59 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4124)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 2.6ms | Allocations: 4516)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:48:00 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3189)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 1.3ms | Allocations: 4148)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:48:37 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4116)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 2.3ms | Allocations: 4507)
+
+
+Started GET "/products/1" for ::1 at 2023-11-21 11:48:38 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3193)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 1.5ms | Allocations: 4154)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:48:40 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4116)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 1.8ms | Allocations: 4506)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:48:40 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3190)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 1.5ms | Allocations: 4149)
+
+
+Started GET "/" for ::1 at 2023-11-21 11:50:13 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.4ms | Allocations: 337)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2565)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:50:16 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 9693)
+Completed 200 OK in 26ms (Views: 19.2ms | ActiveRecord: 4.4ms | Allocations: 11352)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:50:17 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3338)
+Completed 200 OK in 11ms (Views: 4.7ms | ActiveRecord: 1.6ms | Allocations: 4842)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:50:20 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1052)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4127)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.1ms | Allocations: 4529)
+
+
+Started GET "/products/2/edit" for ::1 at 2023-11-21 11:50:24 -0300
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 3.7ms | Allocations: 2580)
+  Rendered products/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 6064)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.0ms | Allocations: 7171)
+
+
+Started PATCH "/products/2" for ::1 at 2023-11-21 11:50:27 -0300
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"Name"=>"Mesa teste"}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mProduct Update (1.7ms)[0m  [1m[33mUPDATE `products` SET `products`.`Name` = 'Mesa teste', `products`.`updated_at` = '2023-11-21 14:50:27.089523' WHERE `products`.`id` = 2[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 16ms (ActiveRecord: 7.0ms | Allocations: 3360)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:50:27 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3193)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.8ms | Allocations: 4162)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:50:28 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1045)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4118)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 1.4ms | Allocations: 4509)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:50:29 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3189)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 1.0ms | Allocations: 4149)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:50:41 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.7ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4125)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 2.7ms | Allocations: 4515)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:50:44 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3189)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 4148)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:50:48 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1049)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4124)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.8ms | Allocations: 4525)
+
+
+Started GET "/products/2" for ::1 at 2023-11-21 11:50:53 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3189)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 1.6ms | Allocations: 4148)
+
+
+Started GET "/products" for ::1 at 2023-11-21 11:51:20 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT `products`.* FROM `products`[0m
+  ↳ app/views/products/index.html.erb:14
+  Rendered products/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4116)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 2.0ms | Allocations: 4506)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateMoveis (20231121145257)
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE `moveis` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20231121145257')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/moveis" for ::1 at 2023-11-21 11:54:10 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MoveisController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/index.html.erb within layouts/application
+  [1m[36mMovei Load (1.0ms)[0m  [1m[34mSELECT `moveis`.* FROM `moveis`[0m
+  ↳ app/views/moveis/index.html.erb:14
+  Rendered moveis/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 19727)
+Completed 200 OK in 46ms (Views: 37.2ms | ActiveRecord: 1.0ms | Allocations: 22686)
+
+
+Started GET "/moveis/new" for ::1 at 2023-11-21 11:54:12 -0300
+Processing by MoveisController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/new.html.erb within layouts/application
+  Rendered moveis/_form.html.erb (Duration: 5.9ms | Allocations: 2575)
+  Rendered moveis/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6067)
+Completed 200 OK in 23ms (Views: 12.5ms | ActiveRecord: 1.7ms | Allocations: 9348)
+
+
+Started POST "/moveis" for ::1 at 2023-11-21 11:54:14 -0300
+Processing by MoveisController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "movei"=>{"name"=>"Teste"}, "commit"=>"Create Movei"}
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/moveis_controller.rb:27:in `block in create'
+  [1m[36mMovei Create (2.4ms)[0m  [1m[32mINSERT INTO `moveis` (`name`, `created_at`, `updated_at`) VALUES ('Teste', '2023-11-21 14:54:14.491041', '2023-11-21 14:54:14.491041')[0m
+  ↳ app/controllers/moveis_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/moveis_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/moveis/1
+Completed 302 Found in 15ms (ActiveRecord: 6.6ms | Allocations: 2710)
+
+
+Started GET "/moveis/1" for ::1 at 2023-11-21 11:54:14 -0300
+Processing by MoveisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovei Load (1.1ms)[0m  [1m[34mSELECT `moveis`.* FROM `moveis` WHERE `moveis`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/moveis_controller.rb:63:in `set_movei'
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/show.html.erb within layouts/application
+  Rendered moveis/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3401)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 1.1ms | Allocations: 4923)
+
+
+Started GET "/moveis" for ::1 at 2023-11-21 11:54:15 -0300
+Processing by MoveisController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/index.html.erb within layouts/application
+  [1m[36mMovei Load (1.3ms)[0m  [1m[34mSELECT `moveis`.* FROM `moveis`[0m
+  ↳ app/views/moveis/index.html.erb:14
+  Rendered moveis/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4039)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 1.3ms | Allocations: 4431)
+
+
+Started GET "/moveis/1" for ::1 at 2023-11-21 11:54:16 -0300
+Processing by MoveisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovei Load (1.3ms)[0m  [1m[34mSELECT `moveis`.* FROM `moveis` WHERE `moveis`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/moveis_controller.rb:63:in `set_movei'
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/show.html.erb within layouts/application
+  Rendered moveis/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3249)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 1.3ms | Allocations: 4208)
+
+
+Started GET "/moveis" for ::1 at 2023-11-21 11:54:18 -0300
+Processing by MoveisController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/index.html.erb within layouts/application
+  [1m[36mMovei Load (1.2ms)[0m  [1m[34mSELECT `moveis`.* FROM `moveis`[0m
+  ↳ app/views/moveis/index.html.erb:14
+  Rendered moveis/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4040)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.2ms | Allocations: 4441)
+
+
+Started GET "/moveis/1" for ::1 at 2023-11-21 11:54:22 -0300
+Processing by MoveisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovei Load (1.5ms)[0m  [1m[34mSELECT `moveis`.* FROM `moveis` WHERE `moveis`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/moveis_controller.rb:63:in `set_movei'
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/show.html.erb within layouts/application
+  Rendered moveis/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3257)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 1.5ms | Allocations: 4234)
+
+
+Started GET "/moveis" for ::1 at 2023-11-21 11:54:27 -0300
+Processing by MoveisController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/index.html.erb within layouts/application
+  [1m[36mMovei Load (1.4ms)[0m  [1m[34mSELECT `moveis`.* FROM `moveis`[0m
+  ↳ app/views/moveis/index.html.erb:14
+  Rendered moveis/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4032)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.4ms | Allocations: 4422)
+
+
+Started GET "/moveis/1" for ::1 at 2023-11-21 11:54:31 -0300
+Processing by MoveisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovei Load (3.4ms)[0m  [1m[34mSELECT `moveis`.* FROM `moveis` WHERE `moveis`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/moveis_controller.rb:63:in `set_movei'
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/show.html.erb within layouts/application
+  Rendered moveis/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3249)
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 3.4ms | Allocations: 4209)
+
+
+Started GET "/moveis" for ::1 at 2023-11-21 11:54:33 -0300
+Processing by MoveisController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering moveis/index.html.erb within layouts/application
+  [1m[36mMovei Load (1.0ms)[0m  [1m[34mSELECT `moveis`.* FROM `moveis`[0m
+  ↳ app/views/moveis/index.html.erb:14
+  Rendered moveis/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4032)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.0ms | Allocations: 4422)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTestes (20231121145630)
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE `testes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20231121145630')[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2023-11-21 11:56:56 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.3ms | Allocations: 337)
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2592)
+
+
+Started GET "/teste" for ::1 at 2023-11-21 11:56:58 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/teste"):
+  
+Started GET "/testes" for ::1 at 2023-11-21 11:57:00 -0300
+Processing by TestesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering testes/index.html.erb within layouts/application
+  [1m[36mTeste Load (1.2ms)[0m  [1m[34mSELECT `testes`.* FROM `testes`[0m
+  ↳ app/views/testes/index.html.erb:14
+  Rendered testes/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 22752)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 1.2ms | Allocations: 24346)
+
+
+Started GET "/testes/new" for ::1 at 2023-11-21 11:57:02 -0300
+Processing by TestesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering testes/new.html.erb within layouts/application
+  Rendered testes/_form.html.erb (Duration: 4.3ms | Allocations: 2477)
+  Rendered testes/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2832)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 6021)
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 2.8ms | Allocations: 9344)
+
+
+Started POST "/testes" for ::1 at 2023-11-21 11:57:06 -0300
+Processing by TestesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "teste"=>{"name"=>"Teste"}, "commit"=>"Create Teste"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 688)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: testis
+Did you mean?  teste
+               authenticity_token
+               action
+               controller):
+  
+app/controllers/testes_controller.rb:68:in `testis_params'
+app/controllers/testes_controller.rb:24:in `create'
+Started GET "/testes/new" for ::1 at 2023-11-21 11:57:09 -0300
+Processing by TestesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering testes/new.html.erb within layouts/application
+  Rendered testes/_form.html.erb (Duration: 2.4ms | Allocations: 619)
+  Rendered testes/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 734)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3927)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 4319)
+
+
+Started POST "/testes" for ::1 at 2023-11-21 11:57:18 -0300
+Processing by TestesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "teste"=>{"name"=>"Nome Novo"}, "commit"=>"Create Teste"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 668)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: testis
+Did you mean?  teste
+               authenticity_token
+               action
+               controller):
+  
+app/controllers/testes_controller.rb:68:in `testis_params'
+app/controllers/testes_controller.rb:24:in `create'
+Started GET "/testes/new" for ::1 at 2023-11-21 11:57:23 -0300
+Processing by TestesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering testes/new.html.erb within layouts/application
+  Rendered testes/_form.html.erb (Duration: 1.3ms | Allocations: 618)
+  Rendered testes/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3926)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4317)
+
+
+Started GET "/testes" for ::1 at 2023-11-21 11:57:24 -0300
+Processing by TestesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering testes/index.html.erb within layouts/application
+  [1m[36mTeste Load (1.7ms)[0m  [1m[34mSELECT `testes`.* FROM `testes`[0m
+  ↳ app/views/testes/index.html.erb:14
+  Rendered testes/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 756)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 3944)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 1.7ms | Allocations: 4334)
+
+
+Started GET "/testes/new" for ::1 at 2023-11-21 11:57:27 -0300
+Processing by TestesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering testes/new.html.erb within layouts/application
+  Rendered testes/_form.html.erb (Duration: 1.7ms | Allocations: 618)
+  Rendered testes/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3920)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 4310)
+
+
+Started POST "/testes" for ::1 at 2023-11-21 11:57:30 -0300
+Processing by TestesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "teste"=>{"name"=>"Nome"}, "commit"=>"Create Teste"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 670)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: testis
+Did you mean?  teste
+               authenticity_token
+               action
+               controller):
+  
+app/controllers/testes_controller.rb:68:in `testis_params'
+app/controllers/testes_controller.rb:24:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePratileiras (20231121145814)
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE `pratileiras` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20231121145814')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/pratileiras" for ::1 at 2023-11-21 11:58:31 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.3ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 24651)
+Completed 200 OK in 50ms (Views: 42.2ms | ActiveRecord: 1.3ms | Allocations: 27637)
+
+
+Started GET "/pratileiras/new" for ::1 at 2023-11-21 11:58:32 -0300
+Processing by PratileirasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/new.html.erb within layouts/application
+  Rendered pratileiras/_form.html.erb (Duration: 3.4ms | Allocations: 2575)
+  Rendered pratileiras/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 6177)
+Completed 200 OK in 18ms (Views: 8.9ms | ActiveRecord: 2.7ms | Allocations: 9458)
+
+
+Started POST "/pratileiras" for ::1 at 2023-11-21 11:58:37 -0300
+Processing by PratileirasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pratileira"=>{"name"=>"Nova Pratileira"}, "commit"=>"Create Pratileira"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mPratileira Create (0.8ms)[0m  [1m[32mINSERT INTO `pratileiras` (`name`, `created_at`, `updated_at`) VALUES ('Nova Pratileira', '2023-11-21 14:58:37.368463', '2023-11-21 14:58:37.368463')[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pratileiras/1
+Completed 302 Found in 10ms (ActiveRecord: 3.6ms | Allocations: 2710)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 11:58:37 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (0.8ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3510)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.8ms | Allocations: 5032)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 11:58:39 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4148)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.9ms | Allocations: 4540)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 11:58:39 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3359)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 1.5ms | Allocations: 4319)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 11:58:41 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (2.3ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4149)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 2.3ms | Allocations: 4550)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 11:58:46 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.6ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3358)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 1.6ms | Allocations: 4317)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:01:20 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/pratileiras"):
+  
+Started GET "/pratileira" for ::1 at 2023-11-21 12:01:23 -0300
+  
+ActionController::RoutingError (uninitialized constant PratileiraController
+Did you mean?  PratileirasController):
+  
+Started GET "/pratileira" for ::1 at 2023-11-21 12:01:25 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/pratileira"):
+  
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:01:28 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.6ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 6834)
+Completed 200 OK in 39ms (Views: 17.5ms | ActiveRecord: 5.8ms | Allocations: 13246)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:01:29 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4455)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 1.9ms | Allocations: 4980)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:01:30 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3359)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 1.5ms | Allocations: 4331)
+
+
+Started GET "/pratileiras/1/edit" for ::1 at 2023-11-21 12:01:37 -0300
+Processing by PratileirasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.7ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/edit.html.erb within layouts/application
+  Rendered pratileiras/_form.html.erb (Duration: 4.4ms | Allocations: 2474)
+  Rendered pratileiras/edit.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2881)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 6123)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 1.7ms | Allocations: 7222)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:01:39 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.4ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 902)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4144)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.4ms | Allocations: 4535)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:01:40 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3360)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 1.5ms | Allocations: 4335)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:01:41 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.8ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4141)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 1.8ms | Allocations: 4531)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:04:15 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.1ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 10750)
+Completed 200 OK in 35ms (Views: 22.7ms | ActiveRecord: 4.1ms | Allocations: 13801)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:16 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.6ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 350)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3596)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 1.6ms | Allocations: 5121)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:17 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.4ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3426)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 1.4ms | Allocations: 4386)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:18 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3428)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 1.5ms | Allocations: 4403)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:19 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3428)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 1.5ms | Allocations: 4403)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:20 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3428)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 1.5ms | Allocations: 4403)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:20 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3426)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 1.5ms | Allocations: 4385)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:21 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (11.6ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3438)
+Completed 200 OK in 18ms (Views: 4.7ms | ActiveRecord: 11.6ms | Allocations: 4399)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:21 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3426)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 4385)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:21 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.1ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3426)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 1.1ms | Allocations: 4385)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:22 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3426)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 1.9ms | Allocations: 4385)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:22 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.4ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3426)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 1.4ms | Allocations: 4385)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:23 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (0.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3426)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.9ms | Allocations: 4385)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:34 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.4ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3431)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 1.4ms | Allocations: 4391)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:35 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.4ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3426)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 1.4ms | Allocations: 4386)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:35 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.4ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3426)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 1.4ms | Allocations: 4385)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:35 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3426)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 1.5ms | Allocations: 4385)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:04:36 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.0ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 901)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4150)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.0ms | Allocations: 4541)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:38 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (7.6ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3438)
+Completed 200 OK in 14ms (Views: 4.8ms | ActiveRecord: 7.6ms | Allocations: 4399)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:04:41 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (2.3ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4141)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 2.3ms | Allocations: 4531)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:42 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.7ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3426)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 1.7ms | Allocations: 4385)
+
+
+Started GET "/" for ::1 at 2023-11-21 12:04:50 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.0ms | Allocations: 224)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 896)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:54 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (0.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 437)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5079)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.9ms | Allocations: 7720)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:56 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3435)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.5ms | Allocations: 4395)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:56 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.4ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3431)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 1.4ms | Allocations: 4391)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:04:57 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.4ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3426)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 1.4ms | Allocations: 4386)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:06:17 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.3ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 514)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3929)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 1.3ms | Allocations: 5628)
+
+
+Started DELETE "/pratileiras/1" for ::1 at 2023-11-21 12:06:19 -0300
+Processing by PratileirasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mPratileira Load (1.6ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+  [1m[36mPratileira Destroy (1.4ms)[0m  [1m[31mDELETE FROM `pratileiras` WHERE `pratileiras`.`id` = 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/pratileiras
+Completed 302 Found in 15ms (ActiveRecord: 6.5ms | Allocations: 2836)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:06:19 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (0.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 984)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4237)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.9ms | Allocations: 4771)
+
+
+Started GET "/pratileiras/new" for ::1 at 2023-11-21 12:06:45 -0300
+Processing by PratileirasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/new.html.erb within layouts/application
+  Rendered pratileiras/_form.html.erb (Duration: 12.0ms | Allocations: 4957)
+  Rendered pratileiras/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 5318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 8475)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 9007)
+
+
+Started POST "/pratileiras" for ::1 at 2023-11-21 12:06:47 -0300
+Processing by PratileirasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pratileira"=>{"name"=>"teste"}, "commit"=>"Create Pratileira"}
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mPratileira Create (1.4ms)[0m  [1m[32mINSERT INTO `pratileiras` (`name`, `created_at`, `updated_at`) VALUES ('teste', '2023-11-21 15:06:47.727604', '2023-11-21 15:06:47.727604')[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pratileiras/2
+Completed 302 Found in 13ms (ActiveRecord: 5.4ms | Allocations: 2632)
+
+
+Started GET "/pratileiras/2" for ::1 at 2023-11-21 12:06:47 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPratileira Load (0.7ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3593)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.7ms | Allocations: 4561)
+
+
+Started DELETE "/pratileiras/2" for ::1 at 2023-11-21 12:06:49 -0300
+Processing by PratileirasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mPratileira Load (1.8ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+  [1m[36mPratileira Destroy (1.1ms)[0m  [1m[31mDELETE FROM `pratileiras` WHERE `pratileiras`.`id` = 2[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/pratileiras
+Completed 302 Found in 13ms (ActiveRecord: 7.0ms | Allocations: 2761)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:06:49 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (0.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4000)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.9ms | Allocations: 4399)
+
+
+Started GET "/pratileiras/new" for ::1 at 2023-11-21 12:06:50 -0300
+Processing by PratileirasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/new.html.erb within layouts/application
+  Rendered pratileiras/_form.html.erb (Duration: 2.1ms | Allocations: 619)
+  Rendered pratileiras/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 734)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3975)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4365)
+
+
+Started POST "/pratileiras" for ::1 at 2023-11-21 12:06:54 -0300
+Processing by PratileirasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pratileira"=>{"name"=>"teste"}, "commit"=>"Create Pratileira"}
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mPratileira Create (1.7ms)[0m  [1m[32mINSERT INTO `pratileiras` (`name`, `created_at`, `updated_at`) VALUES ('teste', '2023-11-21 15:06:54.484299', '2023-11-21 15:06:54.484299')[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pratileiras/3
+Completed 302 Found in 14ms (ActiveRecord: 5.9ms | Allocations: 2487)
+
+
+Started GET "/pratileiras/3" for ::1 at 2023-11-21 12:06:54 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 348)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3590)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.5ms | Allocations: 4558)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:06:57 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.8ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4141)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.8ms | Allocations: 4531)
+
+
+Started GET "/pratileiras/3" for ::1 at 2023-11-21 12:06:58 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPratileira Load (1.0ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3587)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.0ms | Allocations: 4546)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:07:01 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.8ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 4141)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.8ms | Allocations: 4532)
+
+
+Started GET "/pratileiras/3" for ::1 at 2023-11-21 12:07:05 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPratileira Load (1.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3599)
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 1.9ms | Allocations: 4560)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:07:07 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.6ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4141)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.6ms | Allocations: 4532)
+
+
+Started GET "/pratileiras/3" for ::1 at 2023-11-21 12:07:08 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPratileira Load (1.7ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3599)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 1.7ms | Allocations: 4559)
+
+
+Started DELETE "/pratileiras/3" for ::1 at 2023-11-21 12:07:09 -0300
+Processing by PratileirasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mPratileira Load (1.4ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+  [1m[36mPratileira Destroy (1.8ms)[0m  [1m[31mDELETE FROM `pratileiras` WHERE `pratileiras`.`id` = 3[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/pratileiras
+Completed 302 Found in 13ms (ActiveRecord: 6.4ms | Allocations: 2759)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:07:09 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (0.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 757)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3999)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.9ms | Allocations: 4397)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:07:19 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.1ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 985)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4401)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 1.1ms | Allocations: 5536)
+
+
+Started GET "/pratileiras/new" for ::1 at 2023-11-21 12:07:21 -0300
+Processing by PratileirasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/new.html.erb within layouts/application
+  Rendered pratileiras/_form.html.erb (Duration: 2.6ms | Allocations: 886)
+  Rendered pratileiras/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4481)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 5002)
+
+
+Started POST "/pratileiras" for ::1 at 2023-11-21 12:07:23 -0300
+Processing by PratileirasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pratileira"=>{"name"=>"teste"}, "commit"=>"Create Pratileira"}
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mPratileira Create (1.3ms)[0m  [1m[32mINSERT INTO `pratileiras` (`name`, `created_at`, `updated_at`) VALUES ('teste', '2023-11-21 15:07:23.462552', '2023-11-21 15:07:23.462552')[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pratileiras/4
+Completed 302 Found in 15ms (ActiveRecord: 5.7ms | Allocations: 2488)
+
+
+Started GET "/pratileiras/4" for ::1 at 2023-11-21 12:07:23 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPratileira Load (0.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3597)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.9ms | Allocations: 4698)
+
+
+Started GET "/pratileiras/4" for ::1 at 2023-11-21 12:07:25 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPratileira Load (1.3ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3426)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 1.3ms | Allocations: 4387)
+
+
+Started GET "/pratileiras/4" for ::1 at 2023-11-21 12:09:45 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPratileira Load (1.7ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 509)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3924)
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 1.7ms | Allocations: 5623)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:09:47 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (2.0ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4389)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 2.0ms | Allocations: 4916)
+
+
+Started GET "/pratileiras/4" for ::1 at 2023-11-21 12:09:47 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPratileira Load (1.2ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3588)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.2ms | Allocations: 4549)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:09:49 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.0ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4153)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.0ms | Allocations: 4544)
+
+
+Started GET "/" for ::1 at 2023-11-21 12:15:53 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.6ms | Allocations: 635)
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3119)
+
+
+Started GET "/pratileiras/1" for ::1 at 2023-11-21 12:15:56 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPratileira Load (1.2ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+Completed 404 Not Found in 9ms (ActiveRecord: 3.6ms | Allocations: 4211)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pratileira with 'id'=1):
+  
+app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+Started GET "/pratileiras/" for ::1 at 2023-11-21 12:15:58 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (0.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3352)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.19
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 775.1ms | Allocations: 11512)
+Completed 200 OK in 778ms (Views: 776.0ms | ActiveRecord: 0.9ms | Allocations: 12773)
+
+
+Started GET "/pratileiras/4" for ::1 at 2023-11-21 12:16:02 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPratileira Load (1.7ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 519)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3762)
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 1.7ms | Allocations: 4885)
+
+
+Started DELETE "/pratileiras/4" for ::1 at 2023-11-21 12:16:03 -0300
+Processing by PratileirasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+  [1m[36mPratileira Destroy (1.3ms)[0m  [1m[31mDELETE FROM `pratileiras` WHERE `pratileiras`.`id` = 4[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pratileiras_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/pratileiras
+Completed 302 Found in 15ms (ActiveRecord: 6.3ms | Allocations: 2841)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:16:03 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (0.9ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4012)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 0.9ms | Allocations: 4414)
+
+
+Started GET "/pratileiras/new" for ::1 at 2023-11-21 12:16:16 -0300
+Processing by PratileirasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/new.html.erb within layouts/application
+  Rendered pratileiras/_form.html.erb (Duration: 5.6ms | Allocations: 2515)
+  Rendered pratileiras/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2875)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 6290)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 7430)
+
+
+Started POST "/pratileiras" for ::1 at 2023-11-21 12:16:19 -0300
+Processing by PratileirasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "pratileira"=>{"name"=>"teste"}, "commit"=>"Create Pratileira"}
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mPratileira Create (1.9ms)[0m  [1m[32mINSERT INTO `pratileiras` (`name`, `created_at`, `updated_at`) VALUES ('teste', '2023-11-21 15:16:19.314969', '2023-11-21 15:16:19.314969')[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pratileiras_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pratileiras/5
+Completed 302 Found in 13ms (ActiveRecord: 5.2ms | Allocations: 2629)
+
+
+Started GET "/pratileiras/5" for ::1 at 2023-11-21 12:16:19 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPratileira Load (1.1ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 259)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3504)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 1.1ms | Allocations: 4605)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:16:20 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.3ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4375)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 1.3ms | Allocations: 4900)
+
+
+Started GET "/pratileiras/5" for ::1 at 2023-11-21 12:16:21 -0300
+Processing by PratileirasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPratileira Load (1.5ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras` WHERE `pratileiras`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/pratileiras_controller.rb:63:in `set_pratileira'
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/show.html.erb within layouts/application
+  Rendered pratileiras/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3359)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 1.5ms | Allocations: 4320)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:16:23 -0300
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (2.2ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4141)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 2.2ms | Allocations: 4531)
+
+
+Started GET "/" for ::1 at 2023-11-21 12:16:55 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20231121151642_create_paredes.rb
+
+
+):
+  
+activerecord (6.1.7.6) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.7.6) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.7.6) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.7.6) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.7.6) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.6) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (6.1.7.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateParedes (20231121151642)
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE `paredes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20231121151642')[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2023-11-21 12:17:12 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.4ms | Allocations: 543)
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3040)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:17:16 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.0ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1562)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.2ms | Allocations: 27936)
+Completed 200 OK in 54ms (Views: 49.0ms | ActiveRecord: 1.0ms | Allocations: 30040)
+
+
+Started GET "/paredes/new" for ::1 at 2023-11-21 12:17:18 -0300
+Processing by ParedesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/new.html.erb within layouts/application
+  Rendered paredes/_form.html.erb (Duration: 5.8ms | Allocations: 2575)
+  Rendered paredes/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6229)
+Completed 200 OK in 24ms (Views: 14.4ms | ActiveRecord: 3.0ms | Allocations: 9493)
+
+
+Started POST "/paredes" for ::1 at 2023-11-21 12:17:22 -0300
+Processing by ParedesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "parede"=>{"name"=>"Nova Parede"}, "commit"=>"Create Parede"}
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/paredes_controller.rb:27:in `block in create'
+  [1m[36mParede Create (1.2ms)[0m  [1m[32mINSERT INTO `paredes` (`name`, `created_at`, `updated_at`) VALUES ('Nova Parede', '2023-11-21 15:17:22.861182', '2023-11-21 15:17:22.861182')[0m
+  ↳ app/controllers/paredes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/paredes_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/paredes/1
+Completed 302 Found in 13ms (ActiveRecord: 5.3ms | Allocations: 2710)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:17:22 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (10.9ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 267)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3573)
+Completed 200 OK in 19ms (Views: 5.5ms | ActiveRecord: 10.9ms | Allocations: 5097)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:17:24 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.7ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 904)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4200)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.7ms | Allocations: 4591)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:17:24 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.3ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3412)
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 1.3ms | Allocations: 4371)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:17:26 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (2.1ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 4204)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 2.1ms | Allocations: 4605)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:17:28 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.7ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3414)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 1.7ms | Allocations: 4389)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:17:30 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.9ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4199)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.9ms | Allocations: 4589)
+
+
+Started GET "/pratileiras" for ::1 at 2023-11-21 12:17:45 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PratileirasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pratileiras/index.html.erb within layouts/application
+  [1m[36mPratileira Load (1.2ms)[0m  [1m[34mSELECT `pratileiras`.* FROM `pratileiras`[0m
+  ↳ app/views/pratileiras/index.html.erb:14
+  Rendered pratileiras/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 11107)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 3.7ms | Allocations: 14090)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:17:47 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.3ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 3290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 6590)
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 3.8ms | Allocations: 7696)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:17:48 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.6ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3562)
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 1.6ms | Allocations: 5087)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:17:49 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.6ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 902)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4198)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 1.6ms | Allocations: 4589)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/paredes" for ::1 at 2023-11-21 12:20:34 -0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.2ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 11115)
+Completed 200 OK in 34ms (Views: 23.7ms | ActiveRecord: 3.5ms | Allocations: 14532)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:20:35 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.7ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3562)
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 1.7ms | Allocations: 5087)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:20:38 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (2.4ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 908)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4206)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 2.4ms | Allocations: 4608)
+
+
+Started GET "/paredes/1/edit" for ::1 at 2023-11-21 12:20:39 -0300
+Processing by ParedesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.7ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/edit.html.erb within layouts/application
+  Rendered paredes/_form.html.erb (Duration: 5.3ms | Allocations: 2580)
+  Rendered paredes/edit.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 6287)
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 1.7ms | Allocations: 7394)
+
+
+Started PATCH "/paredes/1" for ::1 at 2023-11-21 12:20:40 -0300
+Processing by ParedesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "parede"=>{"name"=>"Nova Parede"}, "commit"=>"Update Parede", "id"=>"1"}
+  [1m[36mParede Load (1.5ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+Redirected to http://localhost:3000/paredes/1
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms | Allocations: 1223)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:20:40 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.5ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3417)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 1.5ms | Allocations: 4390)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:20:42 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.4ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 901)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4197)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.4ms | Allocations: 4588)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:20:43 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (0.9ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3425)
+Completed 200 OK in 16ms (Views: 4.4ms | ActiveRecord: 0.9ms | Allocations: 4386)
+
+
+Started GET "/paredes/1/edit" for ::1 at 2023-11-21 12:20:47 -0300
+Processing by ParedesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.5ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/edit.html.erb within layouts/application
+  Rendered paredes/_form.html.erb (Duration: 1.6ms | Allocations: 685)
+  Rendered paredes/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 835)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4130)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 1.5ms | Allocations: 5089)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:20:49 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.8ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 4195)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 1.8ms | Allocations: 4585)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:20:50 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.0ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3412)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 1.0ms | Allocations: 4372)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:20:57 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.9ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4195)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 1.9ms | Allocations: 4585)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:20:59 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (0.8ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3412)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 4372)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:21:01 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.7ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4207)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.7ms | Allocations: 4597)
+
+
+Started GET "/paredes/1/edit" for ::1 at 2023-11-21 12:21:01 -0300
+Processing by ParedesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.5ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/edit.html.erb within layouts/application
+  Rendered paredes/_form.html.erb (Duration: 2.2ms | Allocations: 685)
+  Rendered paredes/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 835)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4130)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 1.5ms | Allocations: 5090)
+
+
+Started GET "/paredes" for ::1 at 2023-11-21 12:21:06 -0300
+Processing by ParedesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/index.html.erb within layouts/application
+  [1m[36mParede Load (1.7ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes`[0m
+  ↳ app/views/paredes/index.html.erb:14
+  Rendered paredes/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4195)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 1.7ms | Allocations: 4585)
+
+
+Started GET "/paredes/1" for ::1 at 2023-11-21 12:21:07 -0300
+Processing by ParedesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParede Load (1.6ms)[0m  [1m[34mSELECT `paredes`.* FROM `paredes` WHERE `paredes`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/paredes_controller.rb:63:in `set_parede'
+  Rendering layout layouts/application.html.erb
+  Rendering paredes/show.html.erb within layouts/application
+  Rendered paredes/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3412)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 1.6ms | Allocations: 4371)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePisos (20231121152133)
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE `pisos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20231121152133')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/piso" for ::1 at 2023-11-21 12:22:01 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/piso"):
+  
+Started GET "/pisos" for ::1 at 2023-11-21 12:22:02 -0300
+Processing by PisosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/index.html.erb within layouts/application
+  [1m[36mPiso Load (1.0ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos`[0m
+  ↳ app/views/pisos/index.html.erb:14
+  Rendered pisos/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1090)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 27995)
+Completed 200 OK in 62ms (Views: 56.3ms | ActiveRecord: 1.0ms | Allocations: 30412)
+
+
+Started GET "/pisos/new" for ::1 at 2023-11-21 12:22:04 -0300
+Processing by PisosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/new.html.erb within layouts/application
+  Rendered pisos/_form.html.erb (Duration: 3.0ms | Allocations: 2473)
+  Rendered pisos/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2831)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 6184)
+Completed 200 OK in 21ms (Views: 8.4ms | ActiveRecord: 3.6ms | Allocations: 9490)
+
+
+Started POST "/pisos" for ::1 at 2023-11-21 12:22:08 -0300
+Processing by PisosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "piso"=>{"name"=>"Novo piso"}, "commit"=>"Create Piso"}
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pisos_controller.rb:27:in `block in create'
+  [1m[36mPiso Create (1.0ms)[0m  [1m[32mINSERT INTO `pisos` (`name`, `created_at`, `updated_at`) VALUES ('Novo piso', '2023-11-21 15:22:08.164970', '2023-11-21 15:22:08.164970')[0m
+  ↳ app/controllers/pisos_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pisos_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pisos/1
+Completed 302 Found in 11ms (ActiveRecord: 4.0ms | Allocations: 2712)
+
+
+Started GET "/pisos/1" for ::1 at 2023-11-21 12:22:08 -0300
+Processing by PisosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPiso Load (1.5ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos` WHERE `pisos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pisos_controller.rb:63:in `set_piso'
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/show.html.erb within layouts/application
+  Rendered pisos/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3618)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 1.5ms | Allocations: 5143)
+
+
+Started GET "/pisos" for ::1 at 2023-11-21 12:22:09 -0300
+Processing by PisosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/index.html.erb within layouts/application
+  [1m[36mPiso Load (2.0ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos`[0m
+  ↳ app/views/pisos/index.html.erb:14
+  Rendered pisos/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 904)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4254)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 2.0ms | Allocations: 4645)
+
+
+Started GET "/pisos/1" for ::1 at 2023-11-21 12:22:10 -0300
+Processing by PisosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPiso Load (1.6ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos` WHERE `pisos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pisos_controller.rb:63:in `set_piso'
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/show.html.erb within layouts/application
+  Rendered pisos/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3466)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 1.6ms | Allocations: 4425)
+
+
+Started GET "/pisos" for ::1 at 2023-11-21 12:22:16 -0300
+Processing by PisosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/index.html.erb within layouts/application
+  [1m[36mPiso Load (1.9ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos`[0m
+  ↳ app/views/pisos/index.html.erb:14
+  Rendered pisos/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4257)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 1.9ms | Allocations: 4658)
+
+
+Started GET "/pisos/1/edit" for ::1 at 2023-11-21 12:22:19 -0300
+Processing by PisosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPiso Load (1.0ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos` WHERE `pisos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pisos_controller.rb:63:in `set_piso'
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/edit.html.erb within layouts/application
+  Rendered pisos/_form.html.erb (Duration: 1.9ms | Allocations: 715)
+  Rendered pisos/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4340)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 1.0ms | Allocations: 5429)
+
+
+Started PATCH "/pisos/1" for ::1 at 2023-11-21 12:22:20 -0300
+Processing by PisosController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "piso"=>{"name"=>"Novo piso2"}, "commit"=>"Update Piso", "id"=>"1"}
+  [1m[36mPiso Load (0.7ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos` WHERE `pisos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pisos_controller.rb:63:in `set_piso'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pisos_controller.rb:40:in `block in update'
+  [1m[36mPiso Update (1.1ms)[0m  [1m[33mUPDATE `pisos` SET `pisos`.`name` = 'Novo piso2', `pisos`.`updated_at` = '2023-11-21 15:22:20.976068' WHERE `pisos`.`id` = 1[0m
+  ↳ app/controllers/pisos_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pisos_controller.rb:40:in `block in update'
+Redirected to http://localhost:3000/pisos/1
+Completed 302 Found in 10ms (ActiveRecord: 4.4ms | Allocations: 3198)
+
+
+Started GET "/pisos/1" for ::1 at 2023-11-21 12:22:20 -0300
+Processing by PisosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPiso Load (0.9ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos` WHERE `pisos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pisos_controller.rb:63:in `set_piso'
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/show.html.erb within layouts/application
+  Rendered pisos/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3470)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.9ms | Allocations: 4438)
+
+
+Started GET "/pisos" for ::1 at 2023-11-21 12:22:22 -0300
+Processing by PisosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/index.html.erb within layouts/application
+  [1m[36mPiso Load (2.3ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos`[0m
+  ↳ app/views/pisos/index.html.erb:14
+  Rendered pisos/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4251)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 2.3ms | Allocations: 4642)
+
+
+Started GET "/pisos/1" for ::1 at 2023-11-21 12:22:22 -0300
+Processing by PisosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPiso Load (1.5ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos` WHERE `pisos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pisos_controller.rb:63:in `set_piso'
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/show.html.erb within layouts/application
+  Rendered pisos/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3471)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 1.5ms | Allocations: 4431)
+
+
+Started GET "/" for ::1 at 2023-11-21 12:23:11 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.5ms | Allocations: 224)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 964)
+
+
+Started GET "/" for ::1 at 2023-11-21 12:23:41 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.1ms | Allocations: 555)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 1482)
+
+
+Started GET "/pisos" for ::1 at 2023-11-21 12:23:45 -0300
+Processing by PisosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/index.html.erb within layouts/application
+  [1m[36mPiso Load (1.6ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos`[0m
+  ↳ app/views/pisos/index.html.erb:14
+  Rendered pisos/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4821)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 1.6ms | Allocations: 5944)
+
+
+Started DELETE "/pisos/1" for ::1 at 2023-11-21 12:23:47 -0300
+Processing by PisosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mPiso Load (2.6ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos` WHERE `pisos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/pisos_controller.rb:63:in `set_piso'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pisos_controller.rb:52:in `destroy'
+  [1m[36mPiso Destroy (1.7ms)[0m  [1m[31mDELETE FROM `pisos` WHERE `pisos`.`id` = 1[0m
+  ↳ app/controllers/pisos_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pisos_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/pisos
+Completed 302 Found in 14ms (ActiveRecord: 7.4ms | Allocations: 2774)
+
+
+Started GET "/pisos" for ::1 at 2023-11-21 12:23:47 -0300
+Processing by PisosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/index.html.erb within layouts/application
+  [1m[36mPiso Load (1.7ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos`[0m
+  ↳ app/views/pisos/index.html.erb:14
+  Rendered pisos/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 4113)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 1.7ms | Allocations: 4513)
+
+
+Started GET "/pisos/new" for ::1 at 2023-11-21 12:23:50 -0300
+Processing by PisosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/new.html.erb within layouts/application
+  Rendered pisos/_form.html.erb (Duration: 3.1ms | Allocations: 887)
+  Rendered pisos/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4589)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 5109)
+
+
+Started GET "/pisos" for ::1 at 2023-11-21 12:43:30 -0300
+Processing by PisosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/index.html.erb within layouts/application
+  [1m[36mPiso Load (1.7ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos`[0m
+  ↳ app/views/pisos/index.html.erb:14
+  Rendered pisos/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1047)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4397)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 3.7ms | Allocations: 4788)
+
+
+Started GET "/pisos/new" for ::1 at 2023-11-21 12:43:31 -0300
+Processing by PisosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/new.html.erb within layouts/application
+  Rendered pisos/_form.html.erb (Duration: 2.4ms | Allocations: 618)
+  Rendered pisos/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4082)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4473)
+
+
+Started POST "/pisos" for ::1 at 2023-11-21 12:43:33 -0300
+Processing by PisosController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "piso"=>{"name"=>"teste"}, "commit"=>"Create Piso"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pisos_controller.rb:27:in `block in create'
+  [1m[36mPiso Create (0.9ms)[0m  [1m[32mINSERT INTO `pisos` (`name`, `created_at`, `updated_at`) VALUES ('teste', '2023-11-21 15:43:33.268805', '2023-11-21 15:43:33.268805')[0m
+  ↳ app/controllers/pisos_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pisos_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/pisos/2
+Completed 302 Found in 14ms (ActiveRecord: 3.4ms | Allocations: 2507)
+
+
+Started GET "/pisos/2" for ::1 at 2023-11-21 12:43:33 -0300
+Processing by PisosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPiso Load (0.8ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos` WHERE `pisos`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/pisos_controller.rb:63:in `set_piso'
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/show.html.erb within layouts/application
+  Rendered pisos/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3621)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 4728)
+
+
+Started GET "/pisos" for ::1 at 2023-11-21 12:43:34 -0300
+Processing by PisosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/index.html.erb within layouts/application
+  [1m[36mPiso Load (1.8ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos`[0m
+  ↳ app/views/pisos/index.html.erb:14
+  Rendered pisos/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4419)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 1.8ms | Allocations: 4811)
+
+
+Started DELETE "/pisos/2" for ::1 at 2023-11-21 12:43:35 -0300
+Processing by PisosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mPiso Load (1.5ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos` WHERE `pisos`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/pisos_controller.rb:63:in `set_piso'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pisos_controller.rb:52:in `destroy'
+  [1m[36mPiso Destroy (0.7ms)[0m  [1m[31mDELETE FROM `pisos` WHERE `pisos`.`id` = 2[0m
+  ↳ app/controllers/pisos_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pisos_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/pisos
+Completed 302 Found in 11ms (ActiveRecord: 5.5ms | Allocations: 2757)
+
+
+Started GET "/pisos" for ::1 at 2023-11-21 12:43:35 -0300
+Processing by PisosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pisos/index.html.erb within layouts/application
+  [1m[36mPiso Load (1.0ms)[0m  [1m[34mSELECT `pisos`.* FROM `pisos`[0m
+  ↳ app/views/pisos/index.html.erb:14
+  Rendered pisos/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 757)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4107)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 1.0ms | Allocations: 4507)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePisos (20231121152133)
+  [1m[35m (6.8ms)[0m  [1m[35mDROP TABLE `pisos`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (2.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20231121152133'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateParedes (20231121151642)
+  [1m[35m (5.5ms)[0m  [1m[35mDROP TABLE `paredes`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.5ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20231121151642'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreatePratileiras (20231121145814)
+  [1m[35m (3.6ms)[0m  [1m[35mDROP TABLE `pratileiras`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.6ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20231121145814'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTestes (20231121145630)
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE `testes`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.9ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20231121145630'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateMoveis (20231121145257)
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE `moveis`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.6ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20231121145257'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProducts (20231121144055)
+  [1m[35m (3.9ms)[0m  [1m[35mDROP TABLE `products`[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.7ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20231121144055'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2023-11-27 09:43:45 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/arthur/.rvm/gems/ruby-2.7.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.8ms | Allocations: 337)
+Completed 200 OK in 20ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 2508)
+
+
+Started GET "/articles" for ::1 at 2023-11-27 09:43:47 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 18875)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.0ms | Allocations: 19993)
+
+
+Started GET "/" for ::1 at 2023-11-27 10:19:27 -0300
+  
+ActionController::RoutingError (uninitialized constant SticlesController
+Did you mean?  ArticlesController):
+  
+Started GET "/" for ::1 at 2023-11-27 10:19:37 -0300
+  
+ActionController::RoutingError (uninitialized constant AticlesController
+Did you mean?  ArticlesController):
+  
+Started GET "/" for ::1 at 2023-11-27 10:19:38 -0300
+  
+ActionController::RoutingError (uninitialized constant AticlesController
+Did you mean?  ArticlesController):
+  
+Started GET "/" for ::1 at 2023-11-27 10:19:50 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3268)
+Completed 200 OK in 5ms (Views: 4.5ms | Allocations: 3834)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('8315090279072446905', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateArticles (20231127132119)
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20231127132119')[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('8315090279072446905')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `created_at`, `updated_at`) VALUES ('Olá Rails', 'Este é o primeiro post', '2023-11-27 13:34:59.382555', '2023-11-27 13:34:59.382555')[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` /* loading for inspect */ LIMIT 11[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `created_at`, `updated_at`) VALUES ('Olá Curso Ao Vivo', 'Este é o primeiro video ao vivo', '2023-11-27 13:37:44.210753', '2023-11-27 13:37:44.210753')[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` /* loading for inspect */ LIMIT 11[0m
+Started GET "/" for ::1 at 2023-11-27 10:47:56 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 8306)
+Completed 200 OK in 18ms (Views: 12.5ms | ActiveRecord: 4.1ms | Allocations: 9716)
+
+
+Started GET "/" for ::1 at 2023-11-27 11:02:16 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4110)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 4.2ms | Allocations: 4504)
+
+
