@@ -8523,3 +8523,1313 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 25ms (Views: 21.8ms | ActiveRecord: 2.0ms | Allocations: 6227)
 
 
+Started GET "/" for ::1 at 2023-12-11 08:41:06 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.4ms | Allocations: 124)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.4ms | Allocations: 663)
+  Rendered articles/_pagination.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered articles/_about.html.erb (Duration: 0.3ms | Allocations: 114)
+  Rendered articles/_archives.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered articles/_right_side.html.erb (Duration: 2.0ms | Allocations: 1083)
+  Rendered articles/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 7742)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.7ms | Allocations: 141)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 17966)
+Completed 200 OK in 86ms (Views: 74.9ms | ActiveRecord: 4.2ms | Allocations: 21019)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:43:37 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.4ms | Allocations: 119)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.4ms | Allocations: 124)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.6ms | Allocations: 648)
+  Rendered articles/_pagination.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered articles/_about.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered articles/_archives.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered articles/_right_side.html.erb (Duration: 1.8ms | Allocations: 1083)
+  Rendered articles/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 7726)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.4ms | Allocations: 141)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 13843)
+Completed 200 OK in 39ms (Views: 29.2ms | ActiveRecord: 3.4ms | Allocations: 16954)
+
+
+Started GET "/articles/new" for ::1 at 2023-12-11 08:43:46 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.9ms | Allocations: 3484)
+  Rendered articles/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3793)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 7169)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 7715)
+
+
+Started GET "/articles/new" for ::1 at 2023-12-11 08:47:41 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 45.4ms | Allocations: 15516)
+  Rendered articles/new.html.erb within layouts/application (Duration: 46.8ms | Allocations: 15816)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.3ms | Allocations: 144)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 19698)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.0ms | Allocations: 20826)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:47:59 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.6ms | Allocations: 113)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.7ms | Allocations: 123)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.7ms | Allocations: 566)
+  Rendered articles/_pagination.html.erb (Duration: 0.6ms | Allocations: 108)
+  Rendered articles/_about.html.erb (Duration: 0.4ms | Allocations: 114)
+  Rendered articles/_archives.html.erb (Duration: 0.4ms | Allocations: 124)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered articles/_right_side.html.erb (Duration: 3.2ms | Allocations: 1077)
+  Rendered articles/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 4059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 7921)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 1.3ms | Allocations: 8444)
+
+
+Started GET "/articles/8/edit" for ::1 at 2023-12-11 08:48:00 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 6.2ms | Allocations: 1979)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2625)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 6018)
+Completed 200 OK in 24ms (Views: 17.2ms | ActiveRecord: 1.3ms | Allocations: 7529)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:48:08 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.9ms | Allocations: 360)
+  Rendered articles/_pagination.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.9ms | Allocations: 304)
+  Rendered articles/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1961)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 5229)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 1.4ms | Allocations: 5633)
+
+
+Started GET "/articles/new" for ::1 at 2023-12-11 08:48:12 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 4.3ms | Allocations: 1831)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1920)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 5188)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 5591)
+
+
+Started POST "/articles" for ::1 at 2023-12-11 08:48:25 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "body"=>"Teste novo article"}, "commit"=>"Create Article"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 9.1ms | Allocations: 4498)
+  Rendered articles/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4587)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7793)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 8976)
+
+
+Started POST "/articles" for ::1 at 2023-12-11 08:48:31 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"Teste novo", "body"=>"Teste novo article"}, "commit"=>"Create Article"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+  [1m[36mArticle Create (2.6ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `created_at`, `updated_at`) VALUES ('Teste novo', 'Teste novo article', '2023-12-11 11:48:31.894182', '2023-12-11 11:48:31.894182')[0m
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:21:in `create'
+Redirected to http://localhost:3000/articles/9
+Completed 302 Found in 12ms (ActiveRecord: 5.6ms | Allocations: 2586)
+
+
+Started GET "/articles/9" for ::1 at 2023-12-11 08:48:31 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 420)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3691)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 1.0ms | Allocations: 4783)
+
+
+Started GET "/articles/9/edit" for ::1 at 2023-12-11 08:48:34 -0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:56:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.7ms | Allocations: 1900)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1995)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5386)
+Completed 200 OK in 16ms (Views: 9.9ms | ActiveRecord: 1.9ms | Allocations: 6838)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:48:35 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [2 times] (Duration: 2.2ms | Allocations: 705)
+  Rendered articles/_pagination.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_about.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.7ms | Allocations: 314)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 6194)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 1.2ms | Allocations: 6587)
+
+
+Started GET "/articles/new" for ::1 at 2023-12-11 08:49:20 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.5ms | Allocations: 1841)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1940)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5822)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 6216)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:49:35 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [2 times] (Duration: 1.2ms | Allocations: 704)
+  Rendered articles/_pagination.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.6ms | Allocations: 304)
+  Rendered articles/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2310)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 5576)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.9ms | Allocations: 5968)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:53:40 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.4ms | Allocations: 648)
+  Rendered articles/_pagination.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered articles/_about.html.erb (Duration: 0.3ms | Allocations: 114)
+  Rendered articles/_archives.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered articles/_right_side.html.erb (Duration: 2.0ms | Allocations: 1086)
+  Rendered articles/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 7752)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.3ms | Allocations: 141)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 13871)
+Completed 200 OK in 36ms (Views: 25.6ms | ActiveRecord: 3.4ms | Allocations: 17246)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:56:25 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.4ms | Allocations: 121)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 2.2ms | Allocations: 552)
+  Rendered articles/_pagination.html.erb (Duration: 14.3ms | Allocations: 4300)
+  Rendered articles/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 6972)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 7037)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 2.1ms | Allocations: 8304)
+
+
+  
+ActionView::Template::Error (undefined method `next_page' for nil:NilClass):
+    1: <nav class="blog-pagination" aria-label="Pagination">
+    2: 
+    3:         <%= link_to_next_page @aticles, 'Older', class: 'btn btn-outline-primary rounded-pill' %>
+    4:         <%= link_to_previous_page @aticles, 'Newer', class: 'btn btn-outline-secondary rounded-pill disabled' %>
+    5: 
+    6:         <a class="" href="#">Older</a>
+  
+app/views/articles/_pagination.html.erb:3
+app/views/articles/index.html.erb:26
+Started GET "/" for ::1 at 2023-12-11 08:56:43 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.6ms | Allocations: 111)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.6ms | Allocations: 121)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.3ms | Allocations: 586)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 6.7ms | Allocations: 3375)
+  Rendered articles/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 6181)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 6245)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.7ms | Allocations: 7629)
+
+
+  
+ActionView::Template::Error (undefined method `prev_page' for nil:NilClass):
+    1: <nav class="blog-pagination" aria-label="Pagination">
+    2: 
+    3:         <%= link_to_next_page @articles, 'Older', class: 'btn btn-outline-primary rounded-pill' %>
+    4:         <%= link_to_previous_page @aticles, 'Newer', class: 'btn btn-outline-secondary rounded-pill disabled' %>
+    5: 
+    6:         <a class="" href="#">Older</a>
+    7:         <a class="" aria-disabled="true">Newer</a>
+  
+app/views/articles/_pagination.html.erb:4
+app/views/articles/index.html.erb:26
+Started GET "/" for ::1 at 2023-12-11 08:56:55 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.4ms | Allocations: 111)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.5ms | Allocations: 121)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.4ms | Allocations: 553)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.3ms | Allocations: 1121)
+  Rendered articles/_about.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered articles/_archives.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered articles/_right_side.html.erb (Duration: 1.7ms | Allocations: 1083)
+  Rendered articles/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 5065)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.4ms | Allocations: 141)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 9168)
+Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 2.4ms | Allocations: 10473)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:56:58 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.9ms | Allocations: 363)
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 5.5ms | Allocations: 1494)
+  Rendered articles/_about.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.9ms | Allocations: 329)
+  Rendered articles/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 3564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 6835)
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 3.7ms | Allocations: 7284)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:57:00 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.8ms | Allocations: 357)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 6.3ms | Allocations: 1002)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.0ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2939)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 6219)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 2.2ms | Allocations: 6679)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 08:57:02 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.8ms | Allocations: 358)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.3ms | Allocations: 1036)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.8ms | Allocations: 328)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 3543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6813)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 2.5ms | Allocations: 7259)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 08:57:07 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.7ms | Allocations: 357)
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 5.2ms | Allocations: 1005)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.5ms | Allocations: 354)
+  Rendered articles/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 3451)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 6819)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 3.1ms | Allocations: 7265)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 08:57:13 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.7ms | Allocations: 357)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 2.8ms | Allocations: 1005)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.5ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6204)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 2.3ms | Allocations: 6648)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 08:57:14 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.6ms | Allocations: 357)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.5ms | Allocations: 1005)
+  Rendered articles/_about.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.5ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 6204)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 2.9ms | Allocations: 6649)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:57:16 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 7.2ms | Allocations: 357)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.2ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.6ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 2931)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 6199)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 3.1ms | Allocations: 6645)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:59:01 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.6ms | Allocations: 111)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.3ms | Allocations: 606)
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 6.9ms | Allocations: 1516)
+  Rendered articles/_about.html.erb (Duration: 0.6ms | Allocations: 112)
+  Rendered articles/_archives.html.erb (Duration: 0.5ms | Allocations: 122)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.6ms | Allocations: 110)
+  Rendered articles/_right_side.html.erb (Duration: 4.7ms | Allocations: 1064)
+  Rendered articles/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 7849)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.7ms | Allocations: 139)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 11771)
+Completed 200 OK in 42ms (Views: 31.1ms | ActiveRecord: 6.9ms | Allocations: 14180)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 08:59:03 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (2.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.8ms | Allocations: 364)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.8ms | Allocations: 1032)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.1ms | Allocations: 384)
+  Rendered articles/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 3575)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 6846)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 3.9ms | Allocations: 7344)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 08:59:07 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.7ms | Allocations: 357)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.5ms | Allocations: 1005)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.5ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6204)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 2.5ms | Allocations: 6686)
+
+
+Started GET "/" for ::1 at 2023-12-11 08:59:09 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.9ms | Allocations: 357)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.6ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.5ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 6202)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 2.8ms | Allocations: 6687)
+
+
+Started GET "/" for ::1 at 2023-12-11 09:05:09 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.3ms | Allocations: 357)
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 5.2ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.9ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 2931)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 6199)
+Completed 200 OK in 23ms (Views: 15.0ms | ActiveRecord: 5.8ms | Allocations: 6933)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:05:10 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.8ms | Allocations: 357)
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 6.3ms | Allocations: 1511)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.4ms | Allocations: 399)
+  Rendered articles/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 3544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 6812)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 4.8ms | Allocations: 7296)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:05:13 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.7ms | Allocations: 357)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 7.0ms | Allocations: 1005)
+  Rendered articles/_about.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.5ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 6214)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 2.3ms | Allocations: 6697)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:05:14 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.0ms | Allocations: 358)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.9ms | Allocations: 1005)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.4ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2937)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 6215)
+Completed 200 OK in 19ms (Views: 12.9ms | ActiveRecord: 4.0ms | Allocations: 6698)
+
+
+Started GET "/" for ::1 at 2023-12-11 09:05:17 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.9ms | Allocations: 358)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.8ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.7ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 6200)
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 3.3ms | Allocations: 6684)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:05:20 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.7ms | Allocations: 357)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.0ms | Allocations: 1005)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.5ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 6828)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 2.2ms | Allocations: 7312)
+
+
+Started GET "/" for ::1 at 2023-12-11 09:05:32 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.2ms | Allocations: 357)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.7ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.1ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2931)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6199)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 2.9ms | Allocations: 6684)
+
+
+Started GET "/articles/new" for ::1 at 2023-12-11 09:05:37 -0300
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 28.4ms | Allocations: 12874)
+  Rendered articles/new.html.erb within layouts/application (Duration: 29.7ms | Allocations: 13183)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 16355)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 16891)
+
+
+Started POST "/articles" for ::1 at 2023-12-11 09:05:52 -0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"Mais um", "body"=>"Texto aqui de teste Texto aqui de teste Texto aqui de teste Texto aqui de teste Texto aqui de teste Texto aqui de teste "}, "commit"=>"Create Article"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[36mArticle Create (1.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `body`, `created_at`, `updated_at`) VALUES ('Mais um', 'Texto aqui de teste Texto aqui de teste Texto aqui de teste Texto aqui de teste Texto aqui de teste Texto aqui de teste ', '2023-12-11 12:05:52.040523', '2023-12-11 12:05:52.040523')[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+Redirected to http://localhost:3000/articles/10
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms | Allocations: 2753)
+
+
+Started GET "/articles/10" for ::1 at 2023-12-11 09:05:52 -0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:57:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 417)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3704)
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 0.9ms | Allocations: 5197)
+
+
+Started GET "/" for ::1 at 2023-12-11 09:05:54 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.1ms | Allocations: 360)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 5.0ms | Allocations: 1003)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.0ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 3544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 6822)
+Completed 200 OK in 26ms (Views: 20.6ms | ActiveRecord: 3.4ms | Allocations: 7310)
+
+
+Started GET "/" for ::1 at 2023-12-11 09:05:56 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.6ms | Allocations: 359)
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 5.0ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.0ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2933)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 6201)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 3.6ms | Allocations: 6685)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:05:58 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.0ms | Allocations: 37)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.0ms | Allocations: 357)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 4.5ms | Allocations: 1646)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.9ms | Allocations: 329)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 3607)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 6976)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 3.0ms | Allocations: 7460)
+
+
+Started GET "/?page=3" for ::1 at 2023-12-11 09:06:00 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.3ms | Allocations: 37)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 2[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.6ms | Allocations: 357)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 4.4ms | Allocations: 1087)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.6ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 3542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 6810)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 2.7ms | Allocations: 7295)
+
+
+Started GET "/?page=3" for ::1 at 2023-12-11 09:06:13 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.5ms | Allocations: 111)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 2[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.1ms | Allocations: 552)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 2.8ms | Allocations: 1118)
+  Rendered articles/_about.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered articles/_archives.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered articles/_right_side.html.erb (Duration: 1.7ms | Allocations: 1064)
+  Rendered articles/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 5036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.4ms | Allocations: 139)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 8986)
+Completed 200 OK in 24ms (Views: 19.1ms | ActiveRecord: 2.2ms | Allocations: 10305)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:06:15 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.4ms | Allocations: 363)
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 5.9ms | Allocations: 1206)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.7ms | Allocations: 397)
+  Rendered articles/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 3718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 6987)
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 4.1ms | Allocations: 7472)
+
+
+Started GET "/" for ::1 at 2023-12-11 09:06:17 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (2.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.1ms | Allocations: 359)
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 5.2ms | Allocations: 1030)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.7ms | Allocations: 322)
+  Rendered articles/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 3532)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 6812)
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 4.4ms | Allocations: 7299)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:06:18 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.3ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.8ms | Allocations: 358)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.9ms | Allocations: 1173)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.5ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 3105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 6980)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 3.0ms | Allocations: 7465)
+
+
+Started GET "/?page=3" for ::1 at 2023-12-11 09:06:20 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 2[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.9ms | Allocations: 358)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.5ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.5ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 6697)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 3.5ms | Allocations: 7187)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:06:26 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.9ms | Allocations: 357)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 4.8ms | Allocations: 1173)
+  Rendered articles/_about.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.0ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 3104)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 6862)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 3.5ms | Allocations: 7347)
+
+
+Started GET "/?page=3" for ::1 at 2023-12-11 09:06:36 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 2[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.7ms | Allocations: 357)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 3.9ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.8ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2931)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 6199)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 3.4ms | Allocations: 6684)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:06:38 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.9ms | Allocations: 357)
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 8.0ms | Allocations: 1173)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.3ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 3.4ms | Allocations: 808)
+  Rendered articles/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 3618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 6978)
+Completed 200 OK in 28ms (Views: 21.7ms | ActiveRecord: 4.5ms | Allocations: 7462)
+
+
+Started GET "/" for ::1 at 2023-12-11 09:06:40 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.3ms | Allocations: 358)
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 8.3ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.0ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.6ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 6811)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 3.8ms | Allocations: 7298)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:12:58 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.9ms | Allocations: 358)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 4.5ms | Allocations: 1173)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.7ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 3105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.3ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 6989)
+Completed 200 OK in 27ms (Views: 19.6ms | ActiveRecord: 4.7ms | Allocations: 7718)
+
+
+Started GET "/?page=3" for ::1 at 2023-12-11 09:13:00 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.4ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.2ms | Allocations: 37)
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 2[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.0ms | Allocations: 358)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 4.2ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.5ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 2932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 6821)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 3.0ms | Allocations: 7306)
+
+
+Started GET "/?page=2" for ::1 at 2023-12-11 09:13:02 -0300
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 0.8ms | Allocations: 358)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 4.1ms | Allocations: 1173)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 0.9ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 3105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 6373)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 3.1ms | Allocations: 6857)
+
+
+Started GET "/" for ::1 at 2023-12-11 09:13:04 -0300
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_medium_featured.html.erb (Duration: 0.1ms | Allocations: 37)
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 1 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered collection of articles/_article.html.erb [1 times] (Duration: 1.0ms | Allocations: 358)
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 4.6ms | Allocations: 1000)
+  Rendered articles/_about.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered articles/_archives.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered articles/_right_side.html.erb (Duration: 1.4ms | Allocations: 307)
+  Rendered articles/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 2932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_topnavbar.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 6812)
+Completed 200 OK in 27ms (Views: 21.5ms | ActiveRecord: 4.1ms | Allocations: 7298)
+
+
