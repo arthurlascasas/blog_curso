@@ -7,8 +7,8 @@
   <p><%= link_to 'Continue reading...', article, class: 'btn btn-link' %></p>
   
   <div class="d-flex">
-    <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-secondary' %>
-    <%= button_to 'Apagar', article_path(article), class: 'btn btn-danger ms-2', method: :delete, data: {confirm: 'Are you sure?'} %>
+    <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-secondary' if policy(article).update? %>
+    <%= button_to 'Apagar', article_path(article), class: 'btn btn-danger ms-2', method: :delete, data: {confirm: 'Are you sure?'} if policy(article).destroy? %>
   </div>
   
  
