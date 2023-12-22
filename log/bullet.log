@@ -1,0 +1,32 @@
+2023-12-22 11:43:44[WARN] user: arthur
+GET /
+USE eager loading detected
+  Article => [:category]
+  Add to your query: .includes([:category])
+Call stack
+  /home/arthur/workspace/blog_curso/app/views/articles/_medium_featured.html.erb:5:in `_app_views_articles__medium_featured_html_erb__4605043678299049560_19800'
+  /home/arthur/workspace/blog_curso/app/helpers/application_helper.rb:3:in `render_if'
+  /home/arthur/workspace/blog_curso/app/views/articles/index.html.erb:8:in `_app_views_articles_index_html_erb__48524171411348266_19760'
+
+2023-12-22 11:43:44[WARN] user: arthur
+GET /
+USE eager loading detected
+  Article => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/views/articles/_article_detail.html.erb:2:in `_app_views_articles__article_detail_html_erb__1414008090359778437_19880'
+  /home/arthur/workspace/blog_curso/app/views/articles/_medium_featured.html.erb:7:in `_app_views_articles__medium_featured_html_erb__4605043678299049560_19800'
+  /home/arthur/workspace/blog_curso/app/helpers/application_helper.rb:3:in `render_if'
+  /home/arthur/workspace/blog_curso/app/views/articles/index.html.erb:8:in `_app_views_articles_index_html_erb__48524171411348266_19760'
+
+2023-12-22 11:49:29[WARN] user: arthur
+GET /
+USE eager loading detected
+  Article => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/views/articles/_article_detail.html.erb:2:in `_app_views_articles__article_detail_html_erb__1414008090359778437_19880'
+  /home/arthur/workspace/blog_curso/app/views/articles/_medium_featured.html.erb:7:in `_app_views_articles__medium_featured_html_erb__4605043678299049560_19800'
+  /home/arthur/workspace/blog_curso/app/helpers/application_helper.rb:3:in `render_if'
+  /home/arthur/workspace/blog_curso/app/views/articles/index.html.erb:8:in `_app_views_articles_index_html_erb__48524171411348266_19760'
+
