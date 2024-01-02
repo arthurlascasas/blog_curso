@@ -30,3 +30,35 @@ Call stack
   /home/arthur/workspace/blog_curso/app/helpers/application_helper.rb:3:in `render_if'
   /home/arthur/workspace/blog_curso/app/views/articles/index.html.erb:8:in `_app_views_articles_index_html_erb__48524171411348266_19760'
 
+2024-01-02 09:37:24[WARN] user: arthur
+GET /articles?month_year=January+2024
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:15:in `index'
+
+2024-01-02 09:37:35[WARN] user: arthur
+GET /articles?month_year=January+2024
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:15:in `index'
+
+2024-01-02 09:38:57[WARN] user: arthur
+GET /articles?month_year=January+2024
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:15:in `index'
+
+2024-01-02 09:41:25[WARN] user: arthur
+GET /articles?month_year=January+2024
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:15:in `index'
+
