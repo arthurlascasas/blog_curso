@@ -62,3 +62,48 @@ AVOID eager loading detected
 Call stack
   /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:15:in `index'
 
+2024-01-03 09:59:33[WARN] user: arthur
+GET /articles/94
+USE eager loading detected
+  Comment => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:22:in `block in _app_views_articles_show_html_erb___684882846875253025_25420'
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:18:in `_app_views_articles_show_html_erb___684882846875253025_25420'
+
+2024-01-03 09:59:41[WARN] user: arthur
+GET /articles/94
+USE eager loading detected
+  Comment => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:22:in `block in _app_views_articles_show_html_erb___684882846875253025_25420'
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:18:in `_app_views_articles_show_html_erb___684882846875253025_25420'
+
+2024-01-03 10:01:41[WARN] user: arthur
+GET /articles/94
+USE eager loading detected
+  Comment => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:22:in `block in _app_views_articles_show_html_erb___684882846875253025_25420'
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:18:in `_app_views_articles_show_html_erb___684882846875253025_25420'
+
+2024-01-03 10:01:43[WARN] user: arthur
+GET /articles/94
+USE eager loading detected
+  Comment => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:22:in `block in _app_views_articles_show_html_erb___684882846875253025_25420'
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:18:in `_app_views_articles_show_html_erb___684882846875253025_25420'
+
+2024-01-03 10:01:51[WARN] user: arthur
+GET /articles/94
+USE eager loading detected
+  Comment => [:user]
+  Add to your query: .includes([:user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:22:in `block in _app_views_articles_show_html_erb___684882846875253025_25420'
+  /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:18:in `_app_views_articles_show_html_erb___684882846875253025_25420'
+
