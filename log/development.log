@@ -34358,3 +34358,140 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 437ms (Views: 309.4ms | ActiveRecord: 20.6ms | Allocations: 126946)
 
 
+Started GET "/" for ::1 at 2024-01-11 09:55:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 3[0m
+  ↳ app/controllers/articles_controller.rb:16:in `index'
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` IN (9, 10)[0m
+  ↳ app/controllers/articles_controller.rb:16:in `index'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/controllers/articles_controller.rb:16:in `index'
+  [1m[36mArticle Count (2.2ms)[0m  [1m[34mSELECT COUNT(*) AS `count_all`, CAST(DATE_FORMAT(CONVERT_TZ(`articles`.`created_at`, '+00:00', 'Etc/UTC'), '%Y-%m-01') AS DATE) AS `cast_date_format_convert_tz_articles_created_at_00_00_etc_utc_y_m_01_as_date` FROM `articles` WHERE (`articles`.`created_at` IS NOT NULL) GROUP BY CAST(DATE_FORMAT(CONVERT_TZ(`articles`.`created_at`, '+00:00', 'Etc/UTC'), '%Y-%m-01') AS DATE)[0m
+  ↳ app/controllers/articles_controller.rb:28:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.9ms | Allocations: 432)
+  Rendered articles/_article_detail.html.erb (Duration: 1.7ms | Allocations: 684)
+  Rendered articles/_medium_featured.html.erb (Duration: 5.4ms | Allocations: 1774)
+  Rendered articles/_article_detail.html.erb (Duration: 0.8ms | Allocations: 545)
+  Rendered articles/_medium_featured.html.erb (Duration: 1.8ms | Allocations: 909)
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE (id NOT IN(94,116,84)) ORDER BY `articles`.`created_at` DESC LIMIT 2 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 10[0m
+  ↳ app/views/articles/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered articles/_article_detail.html.erb (Duration: 1.9ms | Allocations: 574)
+  Rendered articles/_article_detail.html.erb (Duration: 1.6ms | Allocations: 571)
+  Rendered collection of articles/_article.html.erb [2 times] (Duration: 13.7ms | Allocations: 5810)
+  [1m[36mArticle Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE (id NOT IN(94,116,84))[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 5.4ms | Allocations: 2260)
+  Rendered articles/_about.html.erb (Duration: 0.4ms | Allocations: 113)
+  Rendered articles/_archives.html.erb (Duration: 1.7ms | Allocations: 801)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered articles/_right_side.html.erb (Duration: 4.0ms | Allocations: 1585)
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` ORDER BY `categories`.`name` ASC[0m
+  ↳ app/views/articles/index.html.erb:40
+  Rendered articles/index.html.erb within layouts/application (Duration: 49.4ms | Allocations: 19999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_account_links.html.erb (Duration: 1.5ms | Allocations: 324)
+  Rendered layouts/_topnavbar.html.erb (Duration: 3.8ms | Allocations: 795)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.9ms | Allocations: 242)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 243.4ms | Allocations: 52553)
+Completed 200 OK in 390ms (Views: 246.4ms | ActiveRecord: 24.6ms | Allocations: 107633)
+
+
+Started GET "/" for ::1 at 2024-01-11 09:55:57 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 3[0m
+  ↳ app/controllers/articles_controller.rb:16:in `index'
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` IN (9, 10)[0m
+  ↳ app/controllers/articles_controller.rb:16:in `index'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/controllers/articles_controller.rb:16:in `index'
+  [1m[36mArticle Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) AS `count_all`, CAST(DATE_FORMAT(CONVERT_TZ(`articles`.`created_at`, '+00:00', 'Etc/UTC'), '%Y-%m-01') AS DATE) AS `cast_date_format_convert_tz_articles_created_at_00_00_etc_utc_y_m_01_as_date` FROM `articles` WHERE (`articles`.`created_at` IS NOT NULL) GROUP BY CAST(DATE_FORMAT(CONVERT_TZ(`articles`.`created_at`, '+00:00', 'Etc/UTC'), '%Y-%m-01') AS DATE)[0m
+  ↳ app/controllers/articles_controller.rb:28:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.8ms | Allocations: 432)
+  Rendered articles/_article_detail.html.erb (Duration: 1.6ms | Allocations: 684)
+  Rendered articles/_medium_featured.html.erb (Duration: 3.8ms | Allocations: 1484)
+  Rendered articles/_article_detail.html.erb (Duration: 0.8ms | Allocations: 545)
+  Rendered articles/_medium_featured.html.erb (Duration: 1.7ms | Allocations: 909)
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE (id NOT IN(94,116,84)) ORDER BY `articles`.`created_at` DESC LIMIT 2 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 10[0m
+  ↳ app/views/articles/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered articles/_article_detail.html.erb (Duration: 0.9ms | Allocations: 574)
+  Rendered articles/_article_detail.html.erb (Duration: 0.7ms | Allocations: 571)
+  Rendered collection of articles/_article.html.erb [2 times] (Duration: 9.2ms | Allocations: 5810)
+  [1m[36mArticle Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE (id NOT IN(94,116,84))[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 23.9ms | Allocations: 2121)
+  Rendered articles/_about.html.erb (Duration: 0.2ms | Allocations: 113)
+  Rendered articles/_archives.html.erb (Duration: 1.4ms | Allocations: 801)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered articles/_right_side.html.erb (Duration: 3.3ms | Allocations: 1587)
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` ORDER BY `categories`.`name` ASC[0m
+  ↳ app/views/articles/index.html.erb:40
+  Rendered articles/index.html.erb within layouts/application (Duration: 59.8ms | Allocations: 19572)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_account_links.html.erb (Duration: 1.0ms | Allocations: 324)
+  Rendered layouts/_topnavbar.html.erb (Duration: 2.9ms | Allocations: 791)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.5ms | Allocations: 242)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 100.1ms | Allocations: 33959)
+Completed 200 OK in 198ms (Views: 97.4ms | ActiveRecord: 43.4ms | Allocations: 81189)
+
+
+Started GET "/" for ::1 at 2024-01-11 09:56:00 -0300
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`created_at` DESC LIMIT 3[0m
+  ↳ app/controllers/articles_controller.rb:16:in `index'
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` IN (9, 10)[0m
+  ↳ app/controllers/articles_controller.rb:16:in `index'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/controllers/articles_controller.rb:16:in `index'
+  [1m[36mArticle Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) AS `count_all`, CAST(DATE_FORMAT(CONVERT_TZ(`articles`.`created_at`, '+00:00', 'Etc/UTC'), '%Y-%m-01') AS DATE) AS `cast_date_format_convert_tz_articles_created_at_00_00_etc_utc_y_m_01_as_date` FROM `articles` WHERE (`articles`.`created_at` IS NOT NULL) GROUP BY CAST(DATE_FORMAT(CONVERT_TZ(`articles`.`created_at`, '+00:00', 'Etc/UTC'), '%Y-%m-01') AS DATE)[0m
+  ↳ app/controllers/articles_controller.rb:28:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/_longer_featured.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered articles/_article_detail.html.erb (Duration: 0.6ms | Allocations: 551)
+  Rendered articles/_medium_featured.html.erb (Duration: 1.2ms | Allocations: 917)
+  Rendered articles/_article_detail.html.erb (Duration: 0.6ms | Allocations: 545)
+  Rendered articles/_medium_featured.html.erb (Duration: 1.0ms | Allocations: 909)
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE (id NOT IN(94,116,84)) ORDER BY `articles`.`created_at` DESC LIMIT 2 OFFSET 0[0m
+  ↳ app/views/articles/index.html.erb:24
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 10[0m
+  ↳ app/views/articles/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/articles/index.html.erb:24
+  Rendered articles/_article_detail.html.erb (Duration: 1.7ms | Allocations: 574)
+  Rendered articles/_article_detail.html.erb (Duration: 0.6ms | Allocations: 571)
+  Rendered collection of articles/_article.html.erb [2 times] (Duration: 8.3ms | Allocations: 5318)
+  [1m[36mArticle Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE (id NOT IN(94,116,84))[0m
+  ↳ app/views/articles/_pagination.html.erb:3
+  Rendered articles/_pagination.html.erb (Duration: 2.4ms | Allocations: 1145)
+  Rendered articles/_about.html.erb (Duration: 0.0ms | Allocations: 40)
+  Rendered articles/_archives.html.erb (Duration: 0.7ms | Allocations: 632)
+  Rendered articles/_elsewhere.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered articles/_right_side.html.erb (Duration: 1.1ms | Allocations: 928)
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` ORDER BY `categories`.`name` ASC[0m
+  ↳ app/views/articles/index.html.erb:40
+  Rendered articles/index.html.erb within layouts/application (Duration: 41.2ms | Allocations: 15425)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_account_links.html.erb (Duration: 1.4ms | Allocations: 103)
+  Rendered layouts/_topnavbar.html.erb (Duration: 2.2ms | Allocations: 257)
+  Rendered layouts/_flash_messages.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 18872)
+Completed 200 OK in 69ms (Views: 47.7ms | ActiveRecord: 9.8ms | Allocations: 26192)
+
+
