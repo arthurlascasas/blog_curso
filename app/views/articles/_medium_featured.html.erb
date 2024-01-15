@@ -7,7 +7,7 @@
           <div class="mb-1 text-body-secondary"><%= render 'article_detail', article: article %> </div> <br>
           <p class="card-text mb-auto"><%= truncate(article.body, length: 80) %></p>
 
-          <%= link_to 'Continue reading', article, class: 'icon-link gap-1 icon-link-hover stretched-link' %>
+          <%= link_to t('articles.continue_reading'), article, class: 'icon-link gap-1 icon-link-hover stretched-link' %>
           
         </div>
         <div class="col-auto d-none d-lg-block">
