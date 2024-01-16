@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.new(article_params)
 
     if @article.save
-      redirect_to @article,  notice: "Article was successfully created."
+      redirect_to @article,  notice:  t('.success')
     else
       render :new
     end
@@ -56,7 +56,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to @article,  notice: "Artcile was successfully update."
+      redirect_to @article,  notice: t('.success')
     else
       render :edit
     end    
@@ -66,7 +66,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
 
-    redirect_to root_path,  notice: "Article was successfully destroyed."
+    redirect_to root_path,  notice: t('.success')
   end
 
 

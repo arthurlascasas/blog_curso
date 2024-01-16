@@ -3,7 +3,7 @@ pt:
     continue_reading: Continue lendo...
     about:
       title: Sobre
-      description: Sou Arthur Las Casas e gosto de ensinar a programar em Ruby on Rails.
+      description: Sou Paulo Melo e gosto de ensinar a programar em Ruby on Rails.
     archives: Arquivos
     elsewhere: Em outro lugar
     index:
@@ -22,4 +22,4 @@ pt:
     show:
       comments: Comentários
       add_comment: "Adicione um comentário:"
-      login_create_comment: Por favor, faça o login para criar um comentário. 
+      login_create_comment: Por favor, faça o login para criar um comentário.

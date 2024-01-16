@@ -9,7 +9,12 @@
         <%= link_to t('app.title'), root_path, class: 'blog-header-logo text-body-emphasis text-decoration-none' %>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        <%= render 'layouts/account_links' %>
+
+        <%= render 'layouts/locale_links' %>
+        <div class="ps-3">
+          <%= render 'layouts/account_links' %>
+        </div>
+        
       </div>
     </div> 
   </header>

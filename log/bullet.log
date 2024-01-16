@@ -107,3 +107,21 @@ Call stack
   /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:22:in `block in _app_views_articles_show_html_erb___684882846875253025_25420'
   /home/arthur/workspace/blog_curso/app/views/articles/show.html.erb:18:in `_app_views_articles_show_html_erb___684882846875253025_25420'
 
+2024-01-16 11:34:37[WARN] user: arthur
+GET /pt/articles?category=321321321312
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:16:in `index'
+  /home/arthur/workspace/blog_curso/app/controllers/application_controller.rb:16:in `switch_locale'
+
+2024-01-16 11:34:43[WARN] user: arthur
+GET /pt/articles?category=123213213213231213
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:16:in `index'
+  /home/arthur/workspace/blog_curso/app/controllers/application_controller.rb:16:in `switch_locale'
+
