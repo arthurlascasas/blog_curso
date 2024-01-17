@@ -125,3 +125,39 @@ Call stack
   /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:16:in `index'
   /home/arthur/workspace/blog_curso/app/controllers/application_controller.rb:16:in `switch_locale'
 
+2024-01-17 08:33:36[WARN] user: arthur
+GET /pt/articles?category=321321321312
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:16:in `index'
+  /home/arthur/workspace/blog_curso/app/controllers/application_controller.rb:16:in `switch_locale'
+
+2024-01-17 08:33:54[WARN] user: arthur
+GET /pt/articles?category=321321321312
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:16:in `index'
+  /home/arthur/workspace/blog_curso/app/controllers/application_controller.rb:16:in `switch_locale'
+
+2024-01-17 10:05:44[WARN] user: arthur
+GET /pt/articles?category=321321321312
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:18:in `index'
+  /home/arthur/workspace/blog_curso/app/controllers/application_controller.rb:16:in `switch_locale'
+
+2024-01-17 10:06:55[WARN] user: arthur
+GET /pt/articles?category=321321321312
+AVOID eager loading detected
+  Article => [:category, :user]
+  Remove from your query: .includes([:category, :user])
+Call stack
+  /home/arthur/workspace/blog_curso/app/controllers/articles_controller.rb:18:in `index'
+  /home/arthur/workspace/blog_curso/app/controllers/application_controller.rb:16:in `switch_locale'
+
